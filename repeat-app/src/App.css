@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: #fff5f5;
+}
+
+@media (min-width: 580px) {
+    .App {
+        display: flex;
+        flex-direction: row;
+    }
+}
