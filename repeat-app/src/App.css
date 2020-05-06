@@ -1,14 +1,14 @@
 * {
     box-sizing: border-box;
-    
+    padding: 0;
+    margin: 0 auto;
+    background-color: white;
 }
 body {
-    background-color: #fff5f5;
+    background-color: black;
+}
+.container { 
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width: 580px) {
-    .App {
-        display: flex;
-        flex-direction: row;
-    }
-}

@@ -4,6 +4,7 @@ import '../src/components/Sidebar/Sidebar.css';
 import '../src/components/Box/Box.css';
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { MainBox } from "./components/Box/MainBox";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

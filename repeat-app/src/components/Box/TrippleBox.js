@@ -1,13 +1,24 @@
 import React from "react";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const TrippleBox = () => {
-
+    
     return (
-        <div className="tripple-box box">
-            <article className="tripple-box-article">Text</article>
-            <div className="tripple-box-photo">Photo</div>
-            <div className="tripple-box-photo">Photo</div>
-        </div>
+        <Container>
+            <Row className="trippleContainer-first">
+                <Col>
+                    <div className="trippleBox"></div>
+                </Col>
+                <Col xs={6}>
+                    <div className="trippleBox firstBox-img-middle"></div>
+                </Col>
+                <Col xs={4}>
+                    <div className="trippleBox"></div>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
