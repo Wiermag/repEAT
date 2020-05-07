@@ -1,7 +1,6 @@
 import React from "react";
 
 const Sidebar = () => {
-
     const handleClick = (e) => {
         e.target.classList.toggle('active');
     }
@@ -13,7 +12,6 @@ const Sidebar = () => {
         </section>
     )
 }
-
 export {
     Sidebar
 }
