@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width:580px) {
+    .main {
+        margin-left: 60px;
+    }
+}

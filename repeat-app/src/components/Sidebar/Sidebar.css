@@ -2,6 +2,7 @@
     background-color: #e6b31e;
     height: 60px;
     width: 100vw;
+    z-index: 1;
 }
 .hamburger-container{
     position: absolute;
@@ -19,6 +20,9 @@
     transition: background-size 0.3s ease-in-out;
     cursor: pointer;
     outline: none;
+  }
+  .hamburger:focus {
+   outline: none;
   }
   .hamburger::before,
   .hamburger::after {

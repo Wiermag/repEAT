@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Sidebar.css";
 
 const Sidebar = () => {
-    const handleClick = (e) => {
-        e.target.classList.toggle('active');
+    const [active, setActive] = useState(false)
+
+    const handleClick = () => {
+        setActive(!active);
     }
     return (
         <section className="sidebar">
              <div className="hamburger-container">
-                <button onClick={handleClick} className="hamburger" id="hamburger"></button>
+                <button onClick={handleClick} className={active ? "hamburger active" : "hamburger" } id="hamburger"></button>
             </div>
         </section>
     )

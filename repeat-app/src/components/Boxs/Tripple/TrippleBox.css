@@ -1,0 +1,36 @@
+.trippleContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #343434;
+}
+.trippleBox {
+    max-width: 100%;
+    height: 100vh;
+    background-color: #343434;
+}
+
+.firstBox-img-middle {
+    background-image: url("../../../images/shrimps-corns-and-vegetable-salad-1832016.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.firstBox-img-right {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #e6b31e;
+    font-size: 1.5rem;
+    font-family: 'Cabin Sketch', cursive;
+    text-align: center;
+}
+@media (min-width:580px) {
+    .trippleContainer{
+        display: flex;
+        flex-direction: row;
+    }
+    .firstBox-img-right {
+        font-size: 2.5rem;
+    }
+}
+   
