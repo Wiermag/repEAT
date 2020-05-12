@@ -13,7 +13,7 @@ const Header = (props) => {
 const HeaderButton = () => {
     //formularz po kliknięciu.
     return (
-        <button className="header-button">Sign in</button>
+        <button className="header-button">Join</button>
     )
 }
 export {

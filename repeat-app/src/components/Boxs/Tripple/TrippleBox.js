@@ -5,19 +5,21 @@ import Col from 'react-bootstrap/Col';
 import "./TrippleBox.css"
 
 const TrippleBox = (props) => {
-    //Komponent dla trzech boxów;
     return (
         <Container>
-            <Row className="trippleContainer">
+            <Row className={`trippleContainer ${props.classReverseTripple}`} style={{backgroundColor: props.bckColor}}>
+              
                 <Col>
-                    <div className="trippleBox"></div>
+                    <div className={`trippleBox ${props.classLeftBox}`}></div>
                 </Col>
                 <Col xs={6}>
-                    <div className="trippleBox firstBox-img-middle"></div>
+                    <div className={`trippleBox ${props.classMiddleBox}`}>
+                        <img src={props.imageURL} alt="dinner"/>
+                    </div>
                 </Col>
                 <Col xs={4}>
-                    <div className="trippleBox firstBox-img-right">
-                        {props.textRight}
+                    <div className={`trippleBox ${props.classRightBox}`}>
+                       <p>{props.textRight}</p>
                     </div>
                 </Col>
             </Row>

@@ -1,0 +1,17 @@
+.carousel-indicators {
+    display: none;
+}
+.videoBox {
+    background-color:#e6b31e;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    display: none;
+    display: contents,
+}
+
+div.col-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

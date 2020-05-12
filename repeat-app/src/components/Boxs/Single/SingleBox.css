@@ -14,19 +14,26 @@ div.col-3 {
     max-width: 100%;
 }
 
-.container-box .row{
+.container-box {
     display: flex;
     flex-direction: column;
 }
+.reverse-single {
+   display: flex;
+   flex-direction: row-reverse;
+}
 .videoItem {
-    width: 100%;
+    width: 100vw;
 }
 
 
 @media (min-width:580px) {
     .container-box .row{
         display: flex;
-        flex-direction: row;
     }
+    .videoItem {
+        width: 100%;
+    }
+   
 }
    
