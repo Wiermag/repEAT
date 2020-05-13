@@ -11,7 +11,8 @@
 }
 .header-text {
     font-size: 2rem;
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Vast Shadow', cursive;
+    text-transform: uppercase;
     text-align: center;
     color: #e6b31e;
     line-height: normal;

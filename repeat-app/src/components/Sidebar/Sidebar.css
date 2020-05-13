@@ -4,6 +4,9 @@
     width: 100vw;
     z-index: 1;
 }
+.visible {
+  display: none;
+}
 .hamburger-container{
     position: absolute;
     right: 2%;

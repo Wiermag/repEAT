@@ -1,15 +1,16 @@
 .carousel-indicators {
     display: none;
 }
-.videoBox {
-    background-color:#e6b31e;
-}
+
 .carousel-control-next,
 .carousel-control-prev {
     display: none;
     display: contents,
 }
 
+.carousel-item {
+    transition-duration: 0.2;
+}
 div.col-3 {
     display: flex;
     align-items: center;

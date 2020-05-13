@@ -3,7 +3,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../src/main.css";
 
 import { Sidebar } from "./components/Sidebar/Sidebar";
-import { MainBox } from "./containers/MainBox";
+import { MainBox } from "./containers/MainBox/MainBox";
 
 
 function App() {
