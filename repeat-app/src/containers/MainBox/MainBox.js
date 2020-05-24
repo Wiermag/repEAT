@@ -5,6 +5,7 @@ import { TextBox } from "../../components/TextBox/TextBox"
 import { EventsCarousel } from "../../components/EventsCarousel/EventsCarousel"
 import { TrippleBox } from "../Boxs/Tripple/TrippleBox";
 import "./MainBox.css";
+import { FormJoin } from "../../components/Form/FormJoin";
 
 const MainBox = () => {
     return (
@@ -27,6 +28,7 @@ const MainBox = () => {
             <SingleBox video="images/tomato.mp4">
                 <EventsCarousel/>
             </SingleBox>
+            <FormJoin/>
             {/* <TrippleBox bckColor="#eeeeee"
                         classReverseTripple="reverse-tripple"
                         imageURL="./images/phone-repeat.png"
@@ -34,9 +36,9 @@ const MainBox = () => {
                         classMiddleBox="img-middle"
                         classRightBox="text-right"/>         */}
         </div>
-    )
-}
+    );
+};
 
 export {
     MainBox
-}
+};

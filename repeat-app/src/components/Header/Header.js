@@ -9,16 +9,15 @@ const Header = (props) => {
                 {props.children}
             <div className="header-text">The app that helps you save money while reducing waste!</div>
         </div>
-    )
-}
+    );
+};
 
 const HeaderButton = () => {
     //formularz po kliknięciu.
     return (
-        <button onClick={} className="header-button">Join</button>
-        
-    )
-}
+        <button  className="header-button">Join</button>
+    );
+};
 export {
     Header, 
     HeaderButton
