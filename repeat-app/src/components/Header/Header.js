@@ -1,5 +1,5 @@
 import React from "react";
-import FormJoin from "../Form/FormJoin"
+import FormJoin from "../Form/Person/FormJoinPerson"
 import "./Header.css";
 
 const Header = (props) => {
@@ -15,7 +15,10 @@ const Header = (props) => {
 const HeaderButton = () => {
     //formularz po kliknięciu.
     return (
-        <button  className="header-button">Join</button>
+        <>
+            <button  className="header-button">Join as a private person</button>
+            <button  className="header-button">Join as a company</button>
+        </>
     );
 };
 export {

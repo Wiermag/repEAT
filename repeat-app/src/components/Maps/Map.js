@@ -16,33 +16,32 @@ const  Map = () => {
         window.initMap = initMap()
     };
 
-  const initMap = () => {
-        const map =  new window.google.maps.Map(document.getElementById("map"), {
-        center: {lat: 52.229675, lng: 21.012230}, 
-        zoom : 12
-        });
-        const marker = new window.google.maps.Marker({
-          position: markerPosition,
-          map:map,
-          draggable: true,
-          //title: z nazwą 
-        });
-
-        window.google.maps.event.addListener(marker, 'dragend', function() {
-          setMarkerPosition({
-            lat: marker.getPosition().lat(),
-            lng: marker.getPosition().lng(),
+    const initMap = () => {
+          const map =  new window.google.maps.Map(document.getElementById("map"), {
+          center: {lat: 52.229675, lng: 21.012230}, 
+          zoom : 12
           });
-        });
-      };
-      console.log(markerPosition);
-      
+          const marker = new window.google.maps.Marker({
+            position: markerPosition,
+            map:map,
+            draggable: true, 
+          });
+
+          window.google.maps.event.addListener(marker, 'dragend', function() {
+            setMarkerPosition({
+              lat: marker.getPosition().lat(),
+              lng: marker.getPosition().lng(),
+            });
+          });
+        };
+     
   return (
       <div id="map" className="slideLeft"></div>
       );
   };
+
 export {
     Map
-}
+};
 
 

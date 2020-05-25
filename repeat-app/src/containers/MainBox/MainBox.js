@@ -1,11 +1,13 @@
 import React from "react";
+import "./MainBox.css";
 import { SingleBox } from "../Boxs/Single/SingleBox";
 import { Header, HeaderButton } from "../../components/Header/Header";
 import { TextBox } from "../../components/TextBox/TextBox"
 import { EventsCarousel } from "../../components/EventsCarousel/EventsCarousel"
 import { TrippleBox } from "../Boxs/Tripple/TrippleBox";
-import "./MainBox.css";
-import { FormJoin } from "../../components/Form/FormJoin";
+import { FormJoinPerson } from "../../components/Form/Person/FormJoinPerson";
+import { FormJoinCompany } from "../../components/Form/Company/FormJoinCompany";
+
 
 const MainBox = () => {
     return (
@@ -28,7 +30,8 @@ const MainBox = () => {
             <SingleBox video="images/tomato.mp4">
                 <EventsCarousel/>
             </SingleBox>
-            <FormJoin/>
+            <FormJoinPerson/>
+            <FormJoinCompany/>
             {/* <TrippleBox bckColor="#eeeeee"
                         classReverseTripple="reverse-tripple"
                         imageURL="./images/phone-repeat.png"
