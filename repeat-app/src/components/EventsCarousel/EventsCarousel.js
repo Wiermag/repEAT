@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
+
 import "./EventsCarousel.css";
 
 const EventsCarousel = () => {
 
     const [index, setIndex] = useState(0);
-    const handleSelect = (selectedIndex, e) => {
-          setIndex(selectedIndex);
-    };
+
+    const handleSelect = (e) => {
+          setIndex(e);
+    }
       
         return (
+
           <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
               <img

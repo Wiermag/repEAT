@@ -1,6 +1,13 @@
-import React from "react";
-import FormJoin from "../Form/Person/FormJoinPerson"
+import React, { useState } from "react";
 import "./Header.css";
+import { FormJoinCompany } from "../Form/Company/FormJoinCompany";
+import { FormJoinPerson } from "../Form/Person/FormJoinPerson"
+
+// const [ visible , setVisible ] = useState(true);
+
+// const handleClick = () => {
+//     setVisible(!visible)
+// }
 
 const Header = (props) => {
     return (
@@ -13,11 +20,29 @@ const Header = (props) => {
 };
 
 const HeaderButton = () => {
-    //formularz po kliknięciu.
+    const [ visiblePersonForm , setVisiblePersonForm ] = useState(true);
+    const [ visibleCompanyForm , setVisibleCompanyForm ] = useState(true);
+
+    const handleClickPerson = () => {
+        setVisiblePersonForm(!visiblePersonForm)
+    };
+
+    const handleClickCompany = () => {
+        setVisibleCompanyForm(!visibleCompanyForm);
+
+    }
+   
     return (
         <>
-            <button  className="header-button">Join as a private person</button>
-            <button  className="header-button">Join as a company</button>
+            <button  className="header-button" onClick={handleClickPerson}>{visiblePersonForm ? "Join as a private person" : "Return"}</button>
+            <div className={visiblePersonForm ? "visible" : "" }>
+                <FormJoinPerson/>
+            </div>
+            <button  className="header-button" onClick={handleClickCompany}>{visibleCompanyForm ? "Join as a company" : "Return"}</button>
+            <div className={visibleCompanyForm ? "visible" : "" }>
+                <FormJoinCompany/>
+            </div>
+            
         </>
     );
 };

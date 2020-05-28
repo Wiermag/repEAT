@@ -3,6 +3,9 @@
     font-size: 7rem;
     color: black;
 }
+.visible {
+    display: none;
+  }
 .header-logo {
     display: flex;
     flex-direction: column;

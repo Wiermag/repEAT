@@ -3,12 +3,14 @@ import Form from 'react-bootstrap/Form'
 import "./FormJoinPerson.css";
 import Button from 'react-bootstrap/Button';
 
+
+
 const FormJoinPerson = () => {
   //FIREBASE:
     const firebaseFold = require('firebase/app');
-                  require('firebase/auth');
-                  require('firebase/database');
-
+                         require('firebase/auth');
+                         require('firebase/database');
+                 
     const db = firebaseFold.database().ref('person');
     const saveFormPerson = () => {
         const newFormRef = db.push();
@@ -40,7 +42,7 @@ const FormJoinPerson = () => {
     };   
   
   return (
-    <Form className="form" onSubmit={submit}>
+    <Form className="form" id="form-person" onSubmit={submit}>
          <h1>Add your account:</h1>
         <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>What's your name ?</Form.Label>
@@ -50,7 +52,7 @@ const FormJoinPerson = () => {
                           value ={formPerson.name} 
                           onChange={handleChange}/>
         </Form.Group>
-        <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Group controlId="exampleForm.ControlInput2">
             <Form.Label>What's your password ?</Form.Label>
             <Form.Control type="password" 
                           placeholder="Your password..."  
@@ -58,7 +60,7 @@ const FormJoinPerson = () => {
                           value ={formPerson.password} 
                           onChange={handleChange}/>
         </Form.Group>
-        <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Group controlId="exampleForm.ControlInput3">
             <Form.Label>What's your e-mail ?</Form.Label>
             <Form.Control type="email" 
                           name="email"

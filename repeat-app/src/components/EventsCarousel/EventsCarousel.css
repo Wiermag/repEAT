@@ -1,15 +1,17 @@
 .carousel-indicators {
     display: none;
+   
 }
 
 .carousel-control-next,
 .carousel-control-prev {
     display: none;
-    display: contents,
+
 }
 
 .carousel-item {
     transition-duration: 0.2;
+    /* display: contents, */
 }
 div.col-3 {
     display: flex;

@@ -30,8 +30,7 @@ const MainBox = () => {
             <SingleBox video="images/tomato.mp4">
                 <EventsCarousel/>
             </SingleBox>
-            <FormJoinPerson/>
-            <FormJoinCompany/>
+
             {/* <TrippleBox bckColor="#eeeeee"
                         classReverseTripple="reverse-tripple"
                         imageURL="./images/phone-repeat.png"

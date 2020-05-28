@@ -8,9 +8,10 @@ const  Map = () => {
       lng: 21.012230
     });
 
+   
     useEffect(() => {
         renderMap()
-      },[])
+      },[markerPosition])
 
     const  renderMap = () => {
         window.initMap = initMap()
@@ -33,12 +34,14 @@ const  Map = () => {
               lng: marker.getPosition().lng(),
             });
           });
+          console.log(markerPosition)
         };
      
   return (
       <div id="map" className="slideLeft"></div>
       );
   };
+  
 
 export {
     Map

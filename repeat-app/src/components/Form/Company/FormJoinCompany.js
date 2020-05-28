@@ -41,9 +41,9 @@ const FormJoinCompany = () => {
     };   
 
     return (
-        <Form className="form" onSubmit={submit}>
+        <Form className="form" id="form-company"onSubmit={submit}>
             <h1>Add your business: </h1>
-            <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Group controlId="exampleForm.ControlInput11">
                 <Form.Label>What's name of your company ?</Form.Label>
                 <Form.Control type="text" 
                               placeholder="Your name..." 
@@ -51,7 +51,7 @@ const FormJoinCompany = () => {
                               value ={formCompany.name} 
                               onChange={handleChange}/>
             </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Group controlId="exampleForm.ControlInput12">
                 <Form.Label>What's your phone number ?</Form.Label>
                 <Form.Control type="number" 
                               placeholder="Your phone number..."  
@@ -59,7 +59,7 @@ const FormJoinCompany = () => {
                               value ={formCompany.password} 
                               onChange={handleChange}/>
             </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Group controlId="exampleForm.ControlInput13">
                 <Form.Label>What's your e-mail ?</Form.Label>
                 <Form.Control type="email" 
                               name="email"
@@ -67,16 +67,17 @@ const FormJoinCompany = () => {
                               value={formCompany.email}
                               onChange={handleChange}/>
             </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Group controlId="exampleForm.ControlInput14">
                 <Form.Label>Please enter a password.</Form.Label>
                 <Form.Control type="password" 
                               placeholder="Your password..."  
                               name="password"
                               value ={formCompany.password} 
-                              onChange={handleChange}/>
+                              onChange={handleChange}
+                              autoComplete = "current-password"/>
             </Form.Group>
            
-            <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Group controlId="exampleForm.ControlSelect12">
                 <Form.Label>How did you know about Us ?</Form.Label>
                 <Form.Control as="select" name="info"
                                           onChange={handleChange}>
