@@ -14,16 +14,16 @@ body {
     padding: 0;
    
 }
-.col {
+.col div {
     padding-left:0;
-    padding-right: 0
+    padding-right:0;
 } 
 .row {
     margin: 0
 }
 .col-6,
 .col-4{
-    padding: 0;
+   padding: 0;
    max-width: 100%
 }
 

@@ -8,14 +8,15 @@ const  Map = () => {
       lng: 21.012230
     });
 
-   
-    useEffect(() => {
-        renderMap()
-      },[markerPosition])
-
     const  renderMap = () => {
-        window.initMap = initMap()
+      window.initMap = initMap()
     };
+
+    useEffect(() => {
+      renderMap()
+    },[])
+
+   
 
     const initMap = () => {
           const map =  new window.google.maps.Map(document.getElementById("map"), {

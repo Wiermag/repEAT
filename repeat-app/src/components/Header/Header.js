@@ -29,17 +29,16 @@ const HeaderButton = () => {
 
     const handleClickCompany = () => {
         setVisibleCompanyForm(!visibleCompanyForm);
-
-    }
+    };
    
     return (
         <>
-            <button  className="header-button" onClick={handleClickPerson}>{visiblePersonForm ? "Join as a private person" : "Return"}</button>
+            <button  className="header-button" onClick={handleClickPerson}>{visiblePersonForm ? "Join as a private person" : <i class="fa fa-undo" aria-hidden="true"></i>}</button>
+            <button  className="header-button" onClick={handleClickCompany}>{visibleCompanyForm ? "Join as a company" : <i class="fa fa-undo" aria-hidden="true"></i>}</button>
             <div className={visiblePersonForm ? "visible" : "" }>
                 <FormJoinPerson/>
             </div>
-            <button  className="header-button" onClick={handleClickCompany}>{visibleCompanyForm ? "Join as a company" : "Return"}</button>
-            <div className={visibleCompanyForm ? "visible" : "" }>
+            <div className={visibleCompanyForm ? "visible" : "" }> 
                 <FormJoinCompany/>
             </div>
             

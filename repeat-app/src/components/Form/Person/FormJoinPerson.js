@@ -53,11 +53,11 @@ const FormJoinPerson = () => {
                           onChange={handleChange}/>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlInput2">
-            <Form.Label>What's your password ?</Form.Label>
-            <Form.Control type="password" 
-                          placeholder="Your password..."  
-                          name="password"
-                          value ={formPerson.password} 
+            <Form.Label>About your sale?</Form.Label>
+            <Form.Control type="text" 
+                          placeholder="What time, kind of products..."  
+                          name="sale"
+                          value ={formPerson.sale} 
                           onChange={handleChange}/>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlInput3">
@@ -79,7 +79,7 @@ const FormJoinPerson = () => {
                 <option>Other...</option>
         </Form.Control>
         </Form.Group>
-    <Button variant="primary" type="submit">SEND</Button>
+    <Button variant="primary" type="submit">SEND <i class="fa fa-paper-plane" aria-hidden="true"></i></Button>
   </Form>
   );
 };

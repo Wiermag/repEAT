@@ -5,17 +5,15 @@ import { Header, HeaderButton } from "../../components/Header/Header";
 import { TextBox } from "../../components/TextBox/TextBox"
 import { EventsCarousel } from "../../components/EventsCarousel/EventsCarousel"
 import { TrippleBox } from "../Boxs/Tripple/TrippleBox";
-import { FormJoinPerson } from "../../components/Form/Person/FormJoinPerson";
-import { FormJoinCompany } from "../../components/Form/Company/FormJoinCompany";
+import { CommentsBox } from "../../components/CommentsForm/CommentsBox/CommentsBox"
 
 
 const MainBox = () => {
     return (
         <div className="main">
             <SingleBox  video="images/eat.mp4">
-                <Header>
-                    <HeaderButton/>
-                </Header>           
+                <Header/>  
+                <HeaderButton/>        
             </SingleBox>
             <SingleBox  classReverseSingle="reverse-single"
                         video = "images/plates.mp4">
@@ -30,7 +28,7 @@ const MainBox = () => {
             <SingleBox video="images/tomato.mp4">
                 <EventsCarousel/>
             </SingleBox>
-
+            <CommentsBox/>
             {/* <TrippleBox bckColor="#eeeeee"
                         classReverseTripple="reverse-tripple"
                         imageURL="./images/phone-repeat.png"

@@ -10,7 +10,7 @@ const FormJoinCompany = () => {
     require('firebase/auth');
     require('firebase/database');
 
-    const db = firebaseFold.database().ref('company');
+    const db = firebaseFold.database().ref('form-join-company');
     const saveFormCompany = () => {
     const newFormRef = db.push();
     newFormRef.set(formCompany);
@@ -20,7 +20,7 @@ const FormJoinCompany = () => {
         name: "",
         phoneNumber: "",
         email: "",
-        password: "",
+        sale: "",
         info: "",
     });
     
@@ -31,11 +31,11 @@ const FormJoinCompany = () => {
     const handleChange = (e) => {
         const {  name, value } = e.target;
         return  (
-        setFormCompany( () => {
-            return {
-                ...formCompany, 
-                [name]: value,
-            }
+            setFormCompany( () => {
+                return {
+                    ...formCompany, 
+                    [name]: value,
+                }
             })
         );
     };   
@@ -67,14 +67,13 @@ const FormJoinCompany = () => {
                               value={formCompany.email}
                               onChange={handleChange}/>
             </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput14">
-                <Form.Label>Please enter a password.</Form.Label>
-                <Form.Control type="password" 
-                              placeholder="Your password..."  
-                              name="password"
-                              value ={formCompany.password} 
-                              onChange={handleChange}
-                              autoComplete = "current-password"/>
+            <Form.Group controlId="exampleForm.ControlInput2">
+            <Form.Label>About your sale?</Form.Label>
+            <Form.Control type="text" 
+                          placeholder="What time, kind of products..."  
+                          name="sale"
+                          value ={formCompany.sale} 
+                          onChange={handleChange}/>
             </Form.Group>
            
             <Form.Group controlId="exampleForm.ControlSelect12">
@@ -88,7 +87,7 @@ const FormJoinCompany = () => {
                     <option>Other...</option>
             </Form.Control>
             </Form.Group>
-        <Button variant="primary" type="submit">SEND</Button>
+        <Button variant="primary" type="submit">SEND <i class="fa fa-paper-plane" aria-hidden="true"></i></Button>
       </Form>
       );
 };
