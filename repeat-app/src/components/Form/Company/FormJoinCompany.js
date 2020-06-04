@@ -87,7 +87,7 @@ const FormJoinCompany = () => {
                     <option>Other...</option>
             </Form.Control>
             </Form.Group>
-        <Button variant="primary" type="submit">SEND <i class="fa fa-paper-plane" aria-hidden="true"></i></Button>
+        <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
       </Form>
       );
 };

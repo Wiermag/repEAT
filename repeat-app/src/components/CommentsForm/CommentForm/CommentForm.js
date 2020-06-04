@@ -1,21 +1,10 @@
 import React, { useState } from "react";
 
-const CommentForm = () => {
+const CommentForm = (props) => {
   const [formComment, setFormComment] = useState({
       name: "",
       message: ""
   });
-
-  const firebaseFold = require('firebase/app');
-                       require('firebase/auth');
-                       require('firebase/database');
-  const db = firebaseFold.database().ref('comments');
-
-  //save data:
-  const saveFormComments = () => {
-    const newFormRef = db.push();
-    newFormRef.set(formComment);
-  };
 
   const handleFieldChange = event => {
     const { value, name } = event.target;
@@ -25,14 +14,9 @@ const CommentForm = () => {
       });
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    saveFormComments();
-  };
-
     return (
       <>
-        <form method="post" onSubmit={onSubmit}>
+        <form method="post" onSubmit={e => e.preventDefault()}>
           <div className="form-group">
             <input
               onChange={handleFieldChange}
@@ -56,7 +40,7 @@ const CommentForm = () => {
           </div>
 
           <div className="form-group">
-            <button variant="primary" type="submit" className="btn btn-primary">
+            <button variant="primary" type="submit" onClick={props.addComment} className="btn btn-primary">
               Comment &#10148;
             </button>
           </div>
