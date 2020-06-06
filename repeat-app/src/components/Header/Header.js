@@ -3,11 +3,6 @@ import "./Header.css";
 import { FormJoinCompany } from "../Form/Company/FormJoinCompany";
 import { FormJoinPerson } from "../Form/Person/FormJoinPerson"
 
-// const [ visible , setVisible ] = useState(true);
-
-// const handleClick = () => {
-//     setVisible(!visible)
-// }
 
 const Header = (props) => {
     return (
@@ -41,10 +36,10 @@ const HeaderButton = () => {
             <div className={visibleCompanyForm ? "visible" : "" }> 
                 <FormJoinCompany/>
             </div>
-            
         </>
     );
 };
+
 export {
     Header, 
     HeaderButton

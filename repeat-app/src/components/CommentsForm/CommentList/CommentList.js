@@ -11,8 +11,8 @@ const CommentList = (props) => {
       </h5>
 
       {props.comments.length === 0 ? (
-        <div className="alert text-center alert-info">
-          Be the first to comment
+        <div className="alert text-center alert-warning">
+          Be the first to comment !
         </div>
         ) : null}
 

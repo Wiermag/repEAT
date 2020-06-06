@@ -1,62 +1,63 @@
-/* .form {
+.form {
     margin: 50px;
-    width: 50%;
-} */
-
+    width: 500px;
+    height: 1000px;
+}
 #form-person {
     position: relative;
-    width: 100vw;
-    height: 100vh;
     margin-left: 60px;
+}
+#map-form-person {
+    height: 500px;
+}
+.slideLeft {
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;	
+
+    animation-duration: 1s;	
+    -webkit-animation-duration: 1s;
+
+    animation-timing-function: ease-in-out;	
+    -webkit-animation-timing-function: ease-in-out;		
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
     }
-    .slideLeft {
-        animation-name: slideLeft;
-        -webkit-animation-name: slideLeft;	
-    
-        animation-duration: 1s;	
-        -webkit-animation-duration: 1s;
-    
-        animation-timing-function: ease-in-out;	
-        -webkit-animation-timing-function: ease-in-out;		
+    50%{
+        transform: translateX(-8%);
     }
-    @keyframes slideLeft {
-        0% {
-            transform: translateX(100%);
-        }
-        50%{
-            transform: translateX(-8%);
-        }
-        65%{
-            transform: translateX(4%);
-        }
-        80%{
-            transform: translateX(-4%);
-        }
-        95%{
-            transform: translateX(2%);
-        }			
-        100% {
-            transform: translateX(0%);
-        }
+    65%{
+        transform: translateX(4%);
     }
-    @-webkit-keyframes slideLeft {
-        0% {
-            -webkit-transform: translateX(100%);
-        }
-        50%{
-            -webkit-transform: translateX(-8%);
-        }
-        65%{
-            -webkit-transform: translateX(4%);
-        }
-        80%{
-            -webkit-transform: translateX(-4%);
-        }
-        95%{
-            -webkit-transform: translateX(2%);
-        }			
-        100% {
-            -webkit-transform: translateX(0%);
-        }
+    80%{
+        transform: translateX(-4%);
     }
-    
+    95%{
+        transform: translateX(2%);
+    }			
+    100% {
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    50%{
+        -webkit-transform: translateX(-8%);
+    }
+    65%{
+        -webkit-transform: translateX(4%);
+    }
+    80%{
+        -webkit-transform: translateX(-4%);
+    }
+    95%{
+        -webkit-transform: translateX(2%);
+    }			
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+

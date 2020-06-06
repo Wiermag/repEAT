@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import Form from 'react-bootstrap/Form'
 import "./FormJoinCompany.css";
 import Button from 'react-bootstrap/Button';
+import { MapForm } from '../../Maps/MapForm/MapForm';
 
 const FormJoinCompany = () => {
 
     //FIREBASE:
     const firebaseFold = require('firebase/app');
-    require('firebase/auth');
-    require('firebase/database');
+                         require('firebase/auth');
+                         require('firebase/database');
 
     const db = firebaseFold.database().ref('form-join-company');
     const saveFormCompany = () => {
@@ -22,23 +23,38 @@ const FormJoinCompany = () => {
         email: "",
         sale: "",
         info: "",
+        position: {
+            lat: 0,
+            lng: 0
+        }
     });
     
     const submit = (e) => {
         e.preventDefault();
         saveFormCompany();
     }; 
+    
     const handleChange = (e) => {
         const {  name, value } = e.target;
         return  (
-            setFormCompany( () => {
+            setFormCompany( (prevState) => {
                 return {
-                    ...formCompany, 
+                    ...prevState, 
                     [name]: value,
                 }
             })
         );
     };   
+
+    const getMarker = positionData => {
+        setFormCompany( (prevState) => {
+            return {
+                ...prevState, 
+                position: positionData,
+            }
+        })
+    };
+      
 
     return (
         <Form className="form" id="form-company"onSubmit={submit}>
@@ -75,7 +91,6 @@ const FormJoinCompany = () => {
                           value ={formCompany.sale} 
                           onChange={handleChange}/>
             </Form.Group>
-           
             <Form.Group controlId="exampleForm.ControlSelect12">
                 <Form.Label>How did you know about Us ?</Form.Label>
                 <Form.Control as="select" name="info"
@@ -87,9 +102,10 @@ const FormJoinCompany = () => {
                     <option>Other...</option>
             </Form.Control>
             </Form.Group>
-        <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
-      </Form>
-      );
+            <MapForm onDrag={getMarker} id="map-form-company"/>
+            <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
+        </Form>
+    );
 };
 export {
     FormJoinCompany

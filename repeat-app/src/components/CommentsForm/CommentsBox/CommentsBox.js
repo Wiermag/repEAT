@@ -19,8 +19,7 @@ const CommentsBox = () => {
       <div className="App container bg-light shadow">
         <header className="App-header">
           <h1 className="App-title">
-            Comments:
-            <span className="px-2" role="img" aria-label="Chat">💬</span>
+          Your opinion matters !
           </h1>
         </header>
 

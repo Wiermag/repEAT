@@ -1,9 +1,15 @@
+.form {
+    margin: 50px;
+    width: 500px;
+    height: 1000px;
+}
 #form-company{
     position: relative;
-    width: 100vw;
-    height: 100vh;
     margin-left: 60px;
-    }
+}      
+#map-form-company {
+    height: 500px;
+}
     .slideLeft {
         animation-name: slideLeft;
         -webkit-animation-name: slideLeft;	

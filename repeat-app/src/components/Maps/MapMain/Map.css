@@ -4,6 +4,7 @@
     width: 100vw;
     height: 100vh;
     margin-left: 60px;
+    background-color: red;
     }
     .slideLeft {
         animation-name: slideLeft;

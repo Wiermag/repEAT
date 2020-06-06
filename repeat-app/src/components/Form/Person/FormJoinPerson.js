@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import Form from 'react-bootstrap/Form'
 import "./FormJoinPerson.css";
 import Button from 'react-bootstrap/Button';
-
+import { MapForm } from '../../Maps/MapForm/MapForm';
 
 
 const FormJoinPerson = () => {
+
   //FIREBASE:
     const firebaseFold = require('firebase/app');
                          require('firebase/auth');
                          require('firebase/database');
                  
-    const db = firebaseFold.database().ref('person');
+    const db = firebaseFold.database().ref('form-join-person');
     const saveFormPerson = () => {
         const newFormRef = db.push();
         newFormRef.set(formPerson);
@@ -19,9 +20,13 @@ const FormJoinPerson = () => {
     
     const[formPerson, setFormPerson] = useState({
       name: "",
-      password: "",
+      sale: "",
       email: "",
       info: "",
+      position: {
+        lat: 0,
+        lng: 0
+      }
     });
 
     const submit = (e) => {
@@ -30,20 +35,29 @@ const FormJoinPerson = () => {
     }; 
     
     const handleChange = (e) => {
-      const {  name, value } = e.target;
-      return  (
-        setFormPerson( () => {
-            return {
-                ...formPerson, 
-                [name]: value,
-            }
-          })
-      );
+        const {  name, value } = e.target;
+        return (
+            setFormPerson( (prevState) => {
+              return {
+                  ...prevState, 
+                  [name]: value,
+              }
+            })
+        )
     };   
+
+    const getMarker = positionData => {
+      setFormPerson( (prevState) => {
+        return {
+            ...prevState, 
+            position: positionData,
+        }
+      })
+    };
   
   return (
     <Form className="form" id="form-person" onSubmit={submit}>
-         <h1>Add your account:</h1>
+        <h1>Add your account:</h1>
         <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>What's your name ?</Form.Label>
             <Form.Control type="text" 
@@ -79,8 +93,9 @@ const FormJoinPerson = () => {
                 <option>Other...</option>
         </Form.Control>
         </Form.Group>
-    <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
-  </Form>
+        <MapForm onDrag={getMarker} id="map-form-person"/>
+        <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
+    </Form>
   );
 };
 
