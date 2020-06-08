@@ -5,41 +5,40 @@ import "./EventsCarousel.css";
 
 const EventsCarousel = () => {
 
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-    const handleSelect = (e) => {
-          setIndex(e);
-    }
-      
-        return (
+  const handleSelect = (e) => {
+        setIndex(e);
+  };
 
-          <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="images/reduce-festival.jpg"
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="images/food-festival.jpg"
-                alt="Second slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="images/green-festival.png"
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel>
-        );
-      }
+  return (
+
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="images/reduce-festival.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="images/food-festival.jpg"
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="images/green-festival.png"
+          alt="Third slide"
+        />
+      </Carousel.Item>
+    </Carousel>
+  );
+};
     
-
 export {
     EventsCarousel
 }

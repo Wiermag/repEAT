@@ -8,7 +8,7 @@ const Header = (props) => {
     return (
         <div className="header-logo">
             <h1 href="index.html" className="logo">repEAT</h1>
-                {props.children}
+                { props.children }
             <div className="header-text">The app that helps you save money while reducing waste!</div>
         </div>
     );
@@ -28,8 +28,8 @@ const HeaderButton = () => {
    
     return (
         <>
-            <button  className="header-button" onClick={handleClickPerson}>{visiblePersonForm ? "Join as a private person" : <i class="fa fa-undo" aria-hidden="true"></i>}</button>
-            <button  className="header-button" onClick={handleClickCompany}>{visibleCompanyForm ? "Join as a company" : <i class="fa fa-undo" aria-hidden="true"></i>}</button>
+            <button  className="header-button" onClick={ handleClickPerson }>{visiblePersonForm ? "Join as a private person" : <i class="fa fa-undo" aria-hidden="true"></i>}</button>
+            <button  className="header-button" onClick={ handleClickCompany }>{visibleCompanyForm ? "Join as a company" : <i class="fa fa-undo" aria-hidden="true"></i>}</button>
             <div className={visiblePersonForm ? "visible" : "" }>
                 <FormJoinPerson/>
             </div>

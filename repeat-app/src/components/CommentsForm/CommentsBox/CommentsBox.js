@@ -1,19 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { CommentList } from "../CommentList/CommentList";
 import { CommentForm } from "../CommentForm/CommentForm";
 
 const CommentsBox = () => {
-
-  const [ state, setState ] = useState({
-    commentsArray:[]
-  });
-
-  const addComment = (comment) => {
-    setState({
-      commentsArray:[comment, ...state.commentsArray]
-    })
-  };
 
     return (
       <div className="App container bg-light shadow">
@@ -26,10 +16,10 @@ const CommentsBox = () => {
         <div className="row">
           <div className="col-4  pt-3 border-right">
             <h6>Say something about my app...</h6>
-            <CommentForm addComment={addComment}/>
+            <CommentForm/>
           </div>
           <div className="col-8  pt-3 bg-white">
-            <CommentList comments={state.commentsArray}/>
+            <CommentList  />
           </div>
         </div>
       </div>

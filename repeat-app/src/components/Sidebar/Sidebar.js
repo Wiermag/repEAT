@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Map } from "../Maps/MapMain/Map"
 import "./Sidebar.css";
 
-
 const Sidebar = () => {
     const [ active, setActive ] = useState(false);
     const [ visible , setVisible ] = useState(true);
@@ -22,8 +21,8 @@ const Sidebar = () => {
         <section className="sidebar">
              
              <div className="hamburger-container">
-                <button onClick={handleClick} className={active ? "hamburger active" : "hamburger" } id="hamburger"></button>
-                <img onClick={handleClickMap} className={activeMap ? "map active" : "map" } src="images/google-maps.png" alt="map-google"></img>
+                <button onClick={ handleClick } className={active ? "hamburger active" : "hamburger" } id="hamburger"></button>
+                <img onClick={ handleClickMap } className={activeMap ? "map active" : "map" } src="images/google-maps.png" alt="map-google"></img>
             </div>
             <div className={visible ? "visible" : "" }>
                 <Map id="map"/>

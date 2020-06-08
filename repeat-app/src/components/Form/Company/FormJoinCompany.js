@@ -1,19 +1,14 @@
 import React, { useState } from "react";
-import Form from 'react-bootstrap/Form'
-import "./FormJoinCompany.css";
+import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import "./FormJoinCompany.css";
 import { MapForm } from '../../Maps/MapForm/MapForm';
+import { refFormCompany } from "../../../firebase";
 
 const FormJoinCompany = () => {
 
-    //FIREBASE:
-    const firebaseFold = require('firebase/app');
-                         require('firebase/auth');
-                         require('firebase/database');
-
-    const db = firebaseFold.database().ref('form-join-company');
     const saveFormCompany = () => {
-    const newFormRef = db.push();
+    const newFormRef = refFormCompany.push();
     newFormRef.set(formCompany);
     };
 
@@ -55,7 +50,6 @@ const FormJoinCompany = () => {
         })
     };
       
-
     return (
         <Form className="form" id="form-company"onSubmit={submit}>
             <h1>Add your business: </h1>
@@ -107,6 +101,7 @@ const FormJoinCompany = () => {
         </Form>
     );
 };
+
 export {
     FormJoinCompany
 }

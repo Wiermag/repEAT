@@ -8,7 +8,7 @@ const SingleBox = (props) => {
         <Container className= {`container-box`}>
             <Row className= {`${props.classReverseSingle}`}>
                 <Col xs={4}>
-                    {props.children} 
+                    { props.children } 
                 </Col>
                 <Col>
                     <video autoPlay muted loop className="videoItem videoBox">
