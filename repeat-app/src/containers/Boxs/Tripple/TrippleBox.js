@@ -12,7 +12,7 @@ const TrippleBox = (props) => {
                 </Col>
                 <Col xs={4}>
                     <div className={`trippleBox ${props.classMiddleBox}`}>
-                        <img src={props.imageURL} alt="dinner"/>
+                        <img src={props.imageURL} alt="image"/>
                     </div>
                 </Col>
                 <Col xs={4}>

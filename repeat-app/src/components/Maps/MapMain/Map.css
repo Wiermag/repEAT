@@ -56,4 +56,10 @@
             -webkit-transform: translateX(0%);
         }
     }
-    
+
+    span {
+        line-height: 3;
+        display: flex;
+        flex-direction: row;
+    }
+  

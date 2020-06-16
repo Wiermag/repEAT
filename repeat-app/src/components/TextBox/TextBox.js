@@ -1,11 +1,11 @@
 import React from "react";
-
+import "./TextBox.css";
 const TextBox = (props) => {
 
     return (
-        <div>
+        <p>
             {props.textContain}
-        </div>
+        </p>
     )
 }
 

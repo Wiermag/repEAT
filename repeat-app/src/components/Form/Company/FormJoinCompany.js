@@ -13,11 +13,19 @@ const FormJoinCompany = () => {
     };
 
     const[formCompany, setFormCompany] = useState({
-        name: "",
-        phoneNumber: "",
-        email: "",
-        sale: "",
-        info: "",
+        contact: {
+            name: "",
+            phone: "",
+            email: "",
+            info: "",
+        },
+        sale: {
+            timeSale1:"",
+            timeSale2: "",
+            dateSale:"",
+            aboutSale:"",
+            discount:""
+        },
         position: {
             lat: 0,
             lng: 0
@@ -35,6 +43,12 @@ const FormJoinCompany = () => {
             setFormCompany( (prevState) => {
                 return {
                     ...prevState, 
+                    contact: {
+                        [name]: value,
+                    },
+                    sale: {
+                        [name]: value,
+                    },
                     [name]: value,
                 }
             })
@@ -52,43 +66,77 @@ const FormJoinCompany = () => {
       
     return (
         <Form className="form" id="form-company"onSubmit={submit}>
-            <h1>Add your business: </h1>
-            <Form.Group controlId="exampleForm.ControlInput11">
-                <Form.Label>What's name of your company ?</Form.Label>
+                <h1>COMPANY: </h1>
+                <Form.Group controlId="exampleForm.ControlInput11">
+                    <Form.Label>What's name of your company ?</Form.Label>
+                    <Form.Control type="text" 
+                                placeholder="Your name..." 
+                                name="name"
+                                value ={formCompany.contact.name} 
+                                onChange={handleChange}/>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlInput2">
+                <Form.Label>What do you want to sale ?</Form.Label>
                 <Form.Control type="text" 
-                              placeholder="Your name..." 
-                              name="name"
-                              value ={formCompany.name} 
-                              onChange={handleChange}/>
-            </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput12">
-                <Form.Label>What's your phone number ?</Form.Label>
-                <Form.Control type="number" 
-                              placeholder="Your phone number..."  
-                              name="phoneNumber"
-                              value ={formCompany.password} 
-                              onChange={handleChange}/>
-            </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput13">
-                <Form.Label>What's your e-mail ?</Form.Label>
-                <Form.Control type="email" 
-                              name="email"
-                              placeholder="Your e-mail..." 
-                              value={formCompany.email}
-                              onChange={handleChange}/>
-            </Form.Group>
-            <Form.Group controlId="exampleForm.ControlInput2">
-            <Form.Label>About your sale?</Form.Label>
-            <Form.Control type="text" 
-                          placeholder="What time, kind of products..."  
-                          name="sale"
-                          value ={formCompany.sale} 
-                          onChange={handleChange}/>
-            </Form.Group>
-            <Form.Group controlId="exampleForm.ControlSelect12">
+                            placeholder="What do you have for me..."  
+                            name="aboutSale"
+                            value ={formCompany.sale.aboutSale} 
+                            onChange={handleChange}/>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlInput2">
+                    <Form.Label>When ?</Form.Label>
+                    <Form.Control type="date" 
+                                name="dateSale"
+                                value ={ formCompany.sale.dateSale } 
+                                onChange={ handleChange }/>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlInput2">
+                    <Form.Label>Discount ?</Form.Label>
+                    <Form.Control type="text" 
+                                placeholder= "How big discount...?"  
+                                name="discount"
+                                value ={ formCompany.sale.discount } 
+                                onChange={ handleChange }/>
+                </Form.Group>
+                <div className="box">
+                    <h5 className="text-form">Time:</h5>
+                    <Form.Group controlId="exampleForm.ControlInput2">
+                        <Form.Label>from:</Form.Label>
+                        <Form.Control type="time" 
+                                        placeholder="What time...?"  
+                                        name="timeSale1"
+                                        value ={ formCompany.sale.timeSale1 } 
+                                        onChange={ handleChange }/>
+                    </Form.Group>
+                    <Form.Group controlId="exampleForm.ControlInput2">
+                        <Form.Label>to:</Form.Label>
+                        <Form.Control type="time"  
+                                        name="timeSale2"
+                                        value ={ formCompany.sale.timeSale2 } 
+                                        onChange={ handleChange }/>
+                    </Form.Group>  
+                </div>
+                <Form.Group controlId="exampleForm.ControlInput13">
+                    <Form.Label>What's your e-mail ?</Form.Label>
+                    <Form.Control type="email" 
+                                name="email"
+                                placeholder="Your e-mail..." 
+                                value={formCompany.contact.email}
+                                onChange={handleChange}/>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlInput12">
+                    <Form.Label>What's your phone number ?</Form.Label>
+                    <Form.Control type="number" 
+                                placeholder="Your phone number..."  
+                                name="phone"
+                                value ={formCompany.contact.phone} 
+                                onChange={handleChange}/>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlSelect12">
                 <Form.Label>How did you know about Us ?</Form.Label>
-                <Form.Control as="select" name="info"
-                                          onChange={handleChange}>
+                <Form.Control   as="select" 
+                                name="info"
+                                onChange={handleChange}>
                     <option>Choose...</option>
                     <option>Facebook</option>
                     <option>Friends</option>
@@ -96,8 +144,8 @@ const FormJoinCompany = () => {
                     <option>Other...</option>
             </Form.Control>
             </Form.Group>
-            <MapForm onDrag={getMarker} id="map-form-company"/>
-            <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
+                <MapForm onDrag={getMarker} id="map-form-company"/> 
+                <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
         </Form>
     );
 };

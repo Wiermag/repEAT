@@ -2,6 +2,11 @@
     display: none;
    
 }
+.title-carousel {
+   text-align: center;
+   font-family: 'Vast Shadow', cursive;
+   color: #c59914;
+}
 
 .carousel-control-next,
 .carousel-control-prev {

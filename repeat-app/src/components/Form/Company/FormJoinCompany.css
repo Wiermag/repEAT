@@ -3,9 +3,14 @@
     width: 500px;
     height: 1000px;
 }
+.form-box {
+    display: flex;
+}
 #form-company{
+ 
     position: relative;
     margin-left: 60px;
+    top: 50px;
 }      
 #map-form-company {
     height: 500px;

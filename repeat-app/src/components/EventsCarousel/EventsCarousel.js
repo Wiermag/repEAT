@@ -12,8 +12,10 @@ const EventsCarousel = () => {
   };
 
   return (
-
+    <>
+    <h2 className="title-carousel">FOOD FESTIVALS:</h2>
     <Carousel activeIndex={index} onSelect={handleSelect}>
+   
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -36,6 +38,7 @@ const EventsCarousel = () => {
         />
       </Carousel.Item>
     </Carousel>
+    </>
   );
 };
     

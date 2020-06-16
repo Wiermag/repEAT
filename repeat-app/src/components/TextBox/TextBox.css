@@ -1,0 +1,12 @@
+p {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #c59914;
+    font-size: 1.5rem;
+    font-family: 'Vast Shadow', cursive;
+    text-transform: uppercase;
+    text-align: center;  
+    line-height: 1;
+}

@@ -36,19 +36,35 @@ const  Map = ({ id }) => {
               });
       const infoWindow = new window.google.maps.InfoWindow();
       let latlngbounds = new window.google.maps.LatLngBounds();
+     
     
       //from Firebase - data Person on MapMain
       for (let i = 0; i < formPersonArray.length; i++) {
           const data = formPersonArray[i]
           const myLatlng = new window.google.maps.LatLng(data.position.lat, data.position.lng);
+          //change marker size:
+          const icon = {
+            url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png', 
+            scaledSize: new window.google.maps.Size(50, 50), 
+            origin: new window.google.maps.Point(0,0), 
+            anchor: new window.google.maps.Point(0, 0)
+          };
           const marker = new window.google.maps.Marker({
               position: myLatlng,
               map: map,
-              title: data.name + data.sale,
+              title: data.name,
+              icon: icon
           });
           (function (marker, data) {
               window.google.maps.event.addListener(marker, "click", function () {
-                  infoWindow.setContent("<div style=width:100%;height:40px;text-align:center; display:flex;justify-content:center;align-items:center;>" + data.name + data.sale + "</div>");
+                  infoWindow.setContent(`<span style=width:200px> ${data.name}</span>
+                                          <ul>
+                                            <li> repEAT food offer: ${data.aboutSale}</li>
+                                            <li> When: ${data.dateSale} from ${data.timeSale1} to ${data.timeSale2}</li>
+                                            <li>Discount: ${data.discount}</li>
+                                            <li> Contact: ${data.email} & ${data.phone}</li>
+                                          </ul>              
+                                        `);
                   infoWindow.open(map, marker);
               });
           })(marker, data);
@@ -59,14 +75,29 @@ const  Map = ({ id }) => {
       for (let i = 0; i < formCompanyArray.length; i++) {
         const data = formCompanyArray[i]
         const myLatlng = new window.google.maps.LatLng(data.position.lat, data.position.lng);
+        //change size:
+        const icon = {
+          url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', 
+          scaledSize: new window.google.maps.Size(50, 50), 
+          origin: new window.google.maps.Point(0,0), 
+          anchor: new window.google.maps.Point(0, 0)
+        };
         const marker = new window.google.maps.Marker({
             position: myLatlng,
             map: map,
-            title: data.name + data.sale,
+            title: data.name,
+            icon: icon
         });
         (function (marker, data) {
             window.google.maps.event.addListener(marker, "click", function () {
-                infoWindow.setContent("<div style=width:200px;height:40px;text-align:center>" + data.name + data.sale + "</div>");
+                infoWindow.setContent(`<span style=width:200px> ${data.name}</span>
+                                          <ul>
+                                            <li>repEAT food offer: ${data.aboutSale}</li>
+                                            <li>When: ${data.dateSale} from ${data.timeSale1} to ${data.timeSale2}</li>
+                                            <li>Discount: ${data.discount}</li>
+                                            <li>Contact: ${data.email} & ${data.phone}</li>
+                                          </ul>`
+                                          );
                 infoWindow.open(map, marker);
             });
         })(marker, data);
@@ -77,7 +108,7 @@ const  Map = ({ id }) => {
       const bounds = new window.google.maps.LatLngBounds();
         map.setCenter(latlngbounds.getCenter());
         map.fitBounds(latlngbounds);
-  };
+      };
 
     return <div id="map" className="slideLeft"></div>
 
