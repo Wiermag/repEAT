@@ -1,6 +1,6 @@
 .logo {
     font-family: 'Cabin Sketch', cursive;
-    font-size: 7rem;
+    font-size: 8rem;
     color: black;
 }
 .visible {
@@ -13,20 +13,72 @@
     align-items: center;
 }
 .header-text {
-    font-size: 2rem;
-    font-family: 'Vast Shadow', cursive;
+    font-size: 3.5rem;
+    font-family: 'Cabin Sketch', cursive;
     text-transform: uppercase;
     text-align: center;
     color: #e6b31e;
     line-height: normal;
 }
+.header-box {
+    display: flex;
+    width: 100%
+}
+
 .header-button {
     background-color: #e6b31e;
-    width: 40%;
-    font-size: 10px;
-    height: 3rem;
-    border: 2px solid rgba(0, 0, 0, 0.384);
+    width: 100vw;
+    font-size: 3rem;
+    height: 25vh;
+    border: none;
     color: white;
-    margin: 10px;
+}
+.title-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    width: 100%;
+    height: 25vh;
+    background-color: #e6b31e;
+    color: white;
+}
+.arrow2 {
+    background-color: #e6b31e;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    transform: rotate(50deg);
+    margin-left: 40px
+}
+.arrow1 {
+    background-color: #e6b31e;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    transform:scale(-1,1) rotate(50deg);
+    
+}
+.images {
+    display: flex;
+}
+
+.header-button:hover {
+    font-size: 4rem;
+    transition: font-size 0.5s;
+}
+.header-box a {
+    color: white;
+    font-family: 'Cabin Sketch', cursive;
+}
+.header-box a:hover {
+    color: white;
+    text-decoration: none
+}
+.display-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6b31e;
 }
 

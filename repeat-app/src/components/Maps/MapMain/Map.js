@@ -57,13 +57,14 @@ const  Map = ({ id }) => {
           });
           (function (marker, data) {
               window.google.maps.event.addListener(marker, "click", function () {
-                  infoWindow.setContent(`<span style=width:200px> ${data.name}</span>
+                  infoWindow.setContent(`<div class="window-marker">
+                                          <span style=width:100%> ${data.name}     ${data.discount}</span>
                                           <ul>
-                                            <li> repEAT food offer: ${data.aboutSale}</li>
-                                            <li> When: ${data.dateSale} from ${data.timeSale1} to ${data.timeSale2}</li>
-                                            <li>Discount: ${data.discount}</li>
-                                            <li> Contact: ${data.email} & ${data.phone}</li>
-                                          </ul>              
+                                            <li><p>OFFER:</p> ${data.aboutSale} </li>
+                                            <li><p> WHEN:</p> ${data.dateSale} from ${data.timeSale1} to ${data.timeSale2}</li>
+                                            <li><p> CONTACT:</p>  ${data.email} & ${data.phone}</li>
+                                          </ul> 
+                                        </div>             
                                         `);
                   infoWindow.open(map, marker);
               });
@@ -90,13 +91,14 @@ const  Map = ({ id }) => {
         });
         (function (marker, data) {
             window.google.maps.event.addListener(marker, "click", function () {
-                infoWindow.setContent(`<span style=width:200px> ${data.name}</span>
-                                          <ul>
-                                            <li>repEAT food offer: ${data.aboutSale}</li>
-                                            <li>When: ${data.dateSale} from ${data.timeSale1} to ${data.timeSale2}</li>
-                                            <li>Discount: ${data.discount}</li>
-                                            <li>Contact: ${data.email} & ${data.phone}</li>
-                                          </ul>`
+                infoWindow.setContent(` <div class="window-marker">
+                                          <span style=width:100%> ${data.name}    ${data.discount}</span>
+                                            <ul>
+                                              <li><p>OFFER:</p> ${data.aboutSale}</li>
+                                              <li><p>WHEN:</p> ${data.dateSale} from ${data.timeSale1} to ${data.timeSale2}</li>
+                                              <li><p>CONTACT:</p> ${data.email} & ${data.phone}</li>
+                                            </ul>
+                                        </div>`
                                           );
                 infoWindow.open(map, marker);
             });

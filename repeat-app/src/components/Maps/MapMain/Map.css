@@ -6,60 +6,71 @@
     margin-left: 60px;
     background-color: red;
     }
-    .slideLeft {
-        animation-name: slideLeft;
-        -webkit-animation-name: slideLeft;	
-    
-        animation-duration: 1s;	
-        -webkit-animation-duration: 1s;
-    
-        animation-timing-function: ease-in-out;	
-        -webkit-animation-timing-function: ease-in-out;		
-    }
-    @keyframes slideLeft {
-        0% {
-            transform: translateX(100%);
-        }
-        50%{
-            transform: translateX(-8%);
-        }
-        65%{
-            transform: translateX(4%);
-        }
-        80%{
-            transform: translateX(-4%);
-        }
-        95%{
-            transform: translateX(2%);
-        }			
-        100% {
-            transform: translateX(0%);
-        }
-    }
-    @-webkit-keyframes slideLeft {
-        0% {
-            -webkit-transform: translateX(100%);
-        }
-        50%{
-            -webkit-transform: translateX(-8%);
-        }
-        65%{
-            -webkit-transform: translateX(4%);
-        }
-        80%{
-            -webkit-transform: translateX(-4%);
-        }
-        95%{
-            -webkit-transform: translateX(2%);
-        }			
-        100% {
-            -webkit-transform: translateX(0%);
-        }
-    }
+.slideLeft {
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;	
 
-    span {
-        line-height: 3;
-        display: flex;
-        flex-direction: row;
+    animation-duration: 1s;	
+    -webkit-animation-duration: 1s;
+
+    animation-timing-function: ease-in-out;	
+    -webkit-animation-timing-function: ease-in-out;		
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
     }
-  
+    50%{
+        transform: translateX(-8%);
+    }
+    65%{
+        transform: translateX(4%);
+    }
+    80%{
+        transform: translateX(-4%);
+    }
+    95%{
+        transform: translateX(2%);
+    }			
+    100% {
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    50%{
+        -webkit-transform: translateX(-8%);
+    }
+    65%{
+        -webkit-transform: translateX(4%);
+    }
+    80%{
+        -webkit-transform: translateX(-4%);
+    }
+    95%{
+        -webkit-transform: translateX(2%);
+    }			
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+div.window-marker span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600; 
+}
+div.window-marker li {
+    font-size: 1rem;
+    font-family: 'Poppins', cursive;
+}
+div.window-marker p {
+    font-weight: 700;
+    margin-bottom: 0;
+}

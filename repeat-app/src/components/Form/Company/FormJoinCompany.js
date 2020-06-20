@@ -61,16 +61,17 @@ const FormJoinCompany = () => {
                 ...prevState, 
                 position: positionData,
             }
-        })
-    };
-      
+        });
+    }   
+
     return (
         <Form className="form" id="form-company"onSubmit={submit}>
+            <div className="form-company-box">
                 <h1>COMPANY: </h1>
                 <Form.Group controlId="exampleForm.ControlInput11">
                     <Form.Label>What's name of your company ?</Form.Label>
                     <Form.Control type="text" 
-                                placeholder="Your name..." 
+                                placeholder="your name..." 
                                 name="name"
                                 value ={formCompany.contact.name} 
                                 onChange={handleChange}/>
@@ -78,7 +79,7 @@ const FormJoinCompany = () => {
                 <Form.Group controlId="exampleForm.ControlInput2">
                 <Form.Label>What do you want to sale ?</Form.Label>
                 <Form.Control type="text" 
-                            placeholder="What do you have for me..."  
+                            placeholder="what do you have for me..."  
                             name="aboutSale"
                             value ={formCompany.sale.aboutSale} 
                             onChange={handleChange}/>
@@ -93,7 +94,7 @@ const FormJoinCompany = () => {
                 <Form.Group controlId="exampleForm.ControlInput2">
                     <Form.Label>Discount ?</Form.Label>
                     <Form.Control type="text" 
-                                placeholder= "How big discount...?"  
+                                placeholder= "how big discount...?"  
                                 name="discount"
                                 value ={ formCompany.sale.discount } 
                                 onChange={ handleChange }/>
@@ -103,7 +104,7 @@ const FormJoinCompany = () => {
                     <Form.Group controlId="exampleForm.ControlInput2">
                         <Form.Label>from:</Form.Label>
                         <Form.Control type="time" 
-                                        placeholder="What time...?"  
+                                        placeholder="what time...?"  
                                         name="timeSale1"
                                         value ={ formCompany.sale.timeSale1 } 
                                         onChange={ handleChange }/>
@@ -120,14 +121,14 @@ const FormJoinCompany = () => {
                     <Form.Label>What's your e-mail ?</Form.Label>
                     <Form.Control type="email" 
                                 name="email"
-                                placeholder="Your e-mail..." 
+                                placeholder="your e-mail..." 
                                 value={formCompany.contact.email}
                                 onChange={handleChange}/>
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlInput12">
                     <Form.Label>What's your phone number ?</Form.Label>
                     <Form.Control type="number" 
-                                placeholder="Your phone number..."  
+                                placeholder="your phone number..."  
                                 name="phone"
                                 value ={formCompany.contact.phone} 
                                 onChange={handleChange}/>
@@ -144,8 +145,14 @@ const FormJoinCompany = () => {
                     <option>Other...</option>
             </Form.Control>
             </Form.Group>
-                <MapForm onDrag={getMarker} id="map-form-company"/> 
-                <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
+            </div>
+            <MapForm className="form-company-map" 
+                     onDrag={getMarker} 
+                     id="map-form-company"/> 
+            <Button className="form-company-button" 
+                    variant="warning" 
+                    type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i>
+            </Button>
         </Form>
     );
 };

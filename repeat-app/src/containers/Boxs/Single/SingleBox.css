@@ -24,6 +24,9 @@ div.col-3 {
    display: flex;
    flex-direction: row-reverse;
 }
+.reverse-single p {
+    font-size: 2rem;
+}
 .videoItem {
     width: 100vw;
 }

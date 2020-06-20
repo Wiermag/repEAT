@@ -8,7 +8,9 @@ const TrippleBox = (props) => {
             <Row className={`trippleContainer ${props.classReverseTripple}`} style={{backgroundColor: props.bckColor}}>
               
                 <Col>
-                    <div className={`trippleBox ${props.classLeftBox}`}></div>
+                    <div className={`trippleBox ${props.classLeftBox}`}>
+                         <p>{props.textLeft}</p>
+                    </div>
                 </Col>
                 <Col xs={4}>
                     <div className={`trippleBox ${props.classMiddleBox}`}>

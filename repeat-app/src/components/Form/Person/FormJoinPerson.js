@@ -66,11 +66,12 @@ const FormJoinPerson = () => {
   
   return (
     <Form className="form" id="form-person" onSubmit={ submit }>
+      <div className="form-person-box">
         <h1>PRIVATE PERSON: </h1>
         <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>What's your name ?</Form.Label>
             <Form.Control type="text" 
-                          placeholder="Your name..." 
+                          placeholder="your name..." 
                           name="name"
                           value ={ formPerson.contact.name } 
                           onChange={ handleChange }/>
@@ -86,7 +87,7 @@ const FormJoinPerson = () => {
         <Form.Group controlId="exampleForm.ControlInput2">
             <Form.Label>Discount ?</Form.Label>
             <Form.Control type="text" 
-                          placeholder= "How big discount...?"  
+                          placeholder= "how big discount...?"  
                           name="discount"
                           value ={ formPerson.sale.discount } 
                           onChange={ handleChange }/>
@@ -103,7 +104,7 @@ const FormJoinPerson = () => {
           <Form.Group controlId="exampleForm.ControlInput2">
               <Form.Label>from:</Form.Label>
               <Form.Control type="time" 
-                            placeholder="What time...?"  
+                            placeholder="what time...?"  
                             name="timeSale1"
                             value ={ formPerson.sale.timeSale1 } 
                             onChange={ handleChange }/>
@@ -120,7 +121,7 @@ const FormJoinPerson = () => {
             <Form.Label>What's your e-mail ?</Form.Label>
             <Form.Control type="email" 
                           name="email"
-                          placeholder="Your e-mail..." 
+                          placeholder="your e-mail..." 
                           value={ formPerson.contact.email }
                           onChange={ handleChange }/>
         </Form.Group>
@@ -128,7 +129,7 @@ const FormJoinPerson = () => {
             <Form.Label>What's your phone number ?</Form.Label>
             <Form.Control type="number" 
                           name="phone"
-                          placeholder="Your phone number..." 
+                          placeholder="your phone number..." 
                           value={ formPerson.contact.phone }
                           onChange={ handleChange }/>
         </Form.Group>
@@ -144,8 +145,14 @@ const FormJoinPerson = () => {
                 <option>Other...</option>
         </Form.Control>
         </Form.Group>
-        <MapForm onDrag={ getMarker } id="map-form-person"/>
-        <Button variant="primary" type="submit">SEND <i className="fa fa-paper-plane" aria-hidden="true"></i></Button>
+      </div>
+      <MapForm className="form-person-map" 
+               onDrag={ getMarker } 
+               id="map-form-person"/>
+      <Button className="form-person-button"
+              variant="warning"
+              type="submit">SEND<i className="fa fa-paper-plane" aria-hidden="true"></i>
+      </Button>
     </Form>
   );
 };

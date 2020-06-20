@@ -2,21 +2,30 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
-    line-height: 2;
+    font-family: 'Cabin Sketch', cursive;
 }
+
 body {
     background-color: white;
-    
+}
+
+.form .form-control:focus{
+    border: 3px solid rgba(255, 166, 0, 0.521);
+    box-shadow: none;
+    background-color: rgba(248, 175, 39, 0.486);
+    box-shadow: peru;
+    color: peru;
 }
 .container { 
     margin: 0;
     padding: 0;
+    line-height: 0;
    
 }
 .col div {
     padding-left:0;
     padding-right:0;
+   height: 100vh;
 } 
 .row {
     margin: 0

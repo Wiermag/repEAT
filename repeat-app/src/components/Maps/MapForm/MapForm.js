@@ -1,7 +1,7 @@
 import React, {  useEffect }from 'react';
 import "./MapForm.css"
 
-const  MapForm = ({ onDrag, id }) => {
+const  MapForm = ({ onDrag, id, icon }) => {
 
     useEffect(() => {
       initMap()
@@ -17,7 +17,8 @@ const  MapForm = ({ onDrag, id }) => {
         position:  {lat: 52.229675, 
                     lng: 21.012230,},
         map:map,
-        draggable: true, 
+        draggable: true,
+        icon: icon 
       });
 
       window.google.maps.event.addListener(marker, 'dragend', function() {

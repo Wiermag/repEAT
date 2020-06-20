@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { refComments } from "../../../firebase"
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form'
 
 const CommentForm = () => {
 
@@ -23,9 +25,9 @@ const CommentForm = () => {
 
   return (
     <>
-      <form method="post" onSubmit={e => e.preventDefault()}>
-        <div className="form-group">
-          <input
+      <Form method="post" onSubmit={e => e.preventDefault()}>
+        <div className="form-group form-comment">
+          <Form.Control
             onChange={ handleFieldChange }
             value={ formComment.userName }
             className="form-control"
@@ -34,22 +36,24 @@ const CommentForm = () => {
             type="text"/>
         </div>
 
-        <div className="form-group">
-          <textarea
-            onChange={ handleFieldChange }
-            value={ formComment.message }
-            className="form-control"
-            placeholder="Your Comment..."
-            name="message"
-            rows="5"/>
+        <div className="form-group form-comment">
+         <Form.Control as="textarea"     
+                      type="text" 
+                      onChange={ handleFieldChange }
+                      value={ formComment.message }
+                      className="form-control"
+                      placeholder="Your Comment..."
+                      name="message"
+                      rows="5"/>
         </div>
-
         <div className="form-group">
-          <button variant="primary" type="submit" onClick={ saveComment } className="btn btn-primary">
+          <Button variant="outline-danger" 
+                  type="submit" 
+                  onClick={ saveComment } >
             Comment &#10148;
-          </button>
+          </Button>
         </div>
-      </form>
+      </Form>
     </>
   );
 };

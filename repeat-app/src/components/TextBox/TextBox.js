@@ -3,7 +3,7 @@ import "./TextBox.css";
 const TextBox = (props) => {
 
     return (
-        <p>
+        <p className="text-box">
             {props.textContain}
         </p>
     )

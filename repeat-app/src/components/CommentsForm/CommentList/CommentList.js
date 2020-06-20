@@ -19,12 +19,12 @@ const CommentList = () => {
   return (
     <div className="commentList">
       <h5 className="text-muted mb-4">
-        <span className="badge badge-success">{commentsArray.length}</span>{" "}
+        <span className="badge badge-danger">{commentsArray.length}</span>{" "}
         Comment{commentsArray.length > 0 ? "s:" : ":"}
       </h5>
 
       {commentsArray.length === 0 ? (
-        <div className="alert text-center alert-warning">
+        <div className="alert text-center alert-danger">
           Be the first to comment !
         </div>
         ) : null}
