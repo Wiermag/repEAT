@@ -1,34 +1,29 @@
 .sidebar {
-    background-color: #e6b31e;
-    height: 60px;
-    width: 100vw;
-    z-index: 1;
+  background-color: #e6b31e;
+  height: 60px;
+  width: 100vw;
+  z-index: 1;
 }
 .sidebar .hamburger-container div {
   width: 55px;
   height: 80px;
 }
 .fas .fa-home  {
-   font-size: 40px;
-   background-color: #e6b31e;
-   opacity: 0.5;
-   cursor: pointer;
+  font-size: 40px;
+  background-color: #e6b31e;
+  opacity: 0.5;
+  cursor: pointer;
  }
  .fa-home:before {
   color: white;
   font-size: 40px;
   cursor: pointer;
  }
-
-
-
 .visible {
   display: none;
 }
 
-
 .links  {
-
   width: 50px;
   height: 80vh;
   display: flex;
@@ -60,7 +55,6 @@
   font-size: 30px;
   transition:opacity 1s;
   transition: font-size  0.4s;
- 
 }
 
 

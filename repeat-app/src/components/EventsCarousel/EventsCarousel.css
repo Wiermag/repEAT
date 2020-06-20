@@ -7,16 +7,13 @@
    font-family: 'Vast Shadow', cursive;
    color: #c59914;
 }
-
 .carousel-control-next,
 .carousel-control-prev {
     display: none;
 
 }
-
 .carousel-item {
     transition-duration: 0.2;
-    /* display: contents, */
 }
 div.col-3 {
     display: flex;

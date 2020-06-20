@@ -7,7 +7,7 @@ const TextBox = (props) => {
             {props.textContain}
         </p>
     )
-}
+};
 
 export {
     TextBox

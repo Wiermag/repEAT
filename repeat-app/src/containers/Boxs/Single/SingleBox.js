@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col} from "react-bootstrap";
-import "./SingleBox.css"
-// import video from '../../../images/eat.mp4';
+import "./SingleBox.css";
+
 
 const SingleBox = (props) => {
     return (
@@ -17,8 +17,8 @@ const SingleBox = (props) => {
                 </Col> 
             </Row>
         </Container>
-    )
-}
+    );
+};
 export {
     SingleBox
 }

@@ -25,7 +25,7 @@ const TrippleBox = (props) => {
             </Row>
         </Container>
     )
-}
+};
 
 export {
     TrippleBox

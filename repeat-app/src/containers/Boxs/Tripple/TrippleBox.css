@@ -20,11 +20,9 @@
     align-items: center;
     color: #c59914;
     font-size: 2rem;
-    font-family: 'Vast Shadow', cursive;
-    
+    font-family: 'Vast Shadow', cursive; 
     text-align: center;  
-    line-height: 1;
-    
+    line-height: 1; 
 }
 
 .text-right p {
@@ -48,7 +46,6 @@
     .firstBox-img-right {
         font-size: 2.5rem;
     }
-   
-    
+ 
 }
    

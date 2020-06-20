@@ -62,7 +62,7 @@ const FormJoinCompany = () => {
                 position: positionData,
             }
         });
-    }   
+    };
 
     return (
         <Form className="form" id="form-company"onSubmit={submit}>
