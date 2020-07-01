@@ -31,8 +31,8 @@ const HeaderButton = () => {
         <div className="display-box">
             <div className="title-form">JOIN AS A...</div>
             <div className="images">
-                <img className="arrow1" src="images/arrow1.png"/>
-                <img className="arrow2" src="images/arrow1.png"/>
+                <img className="arrow1" src="images/arrow1.png" alt="arrow1"/>
+                <img className="arrow2" src="images/arrow1.png"  alt="arrow1"/>
             </div>
             <div className="header-box">
                 <button  className="header-button" onClick={ handleClickPerson }>

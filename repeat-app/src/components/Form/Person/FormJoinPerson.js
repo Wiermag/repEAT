@@ -32,6 +32,33 @@ const FormJoinPerson = () => {
       }
     });
 
+    //Validation:
+    const validate = formPerson => {
+      if(!formPerson.contact.name) {
+        return "Name is required!"
+      } else if (formPerson.contact.name.length < 2) {
+        return "Name should be at least 2 characters long."
+      }
+      if(!formPerson.sale.discount) {
+        return "Discount is required!"
+      }
+      if(!formPerson.sale.dateSale) {
+        return "Date is required!"
+      }
+      if(!formPerson.sale.timeSale1) {
+        return "Time is required!"
+      }
+      if(!formPerson.contact.email) {
+        return "Email is required!"
+      } else if ( formPerson.contact.email.length < 3 && !formPerson.contact.email.includes("@")) {
+        return "Email should be valid."
+      }
+      if(formPerson.position.lat=0 ) {
+        return "Please mark your position !"
+      }
+    };
+    
+    //Submit Data:
     const submit = (e) => {
       e.preventDefault();
       saveFormPerson();
@@ -55,6 +82,8 @@ const FormJoinPerson = () => {
         )
     };   
 
+  
+    
     const getMarker = positionData => {
       setFormPerson( (prevState) => {
         return {
@@ -66,6 +95,7 @@ const FormJoinPerson = () => {
   
   return (
     <Form className="form" id="form-person" onSubmit={ submit }>
+     
       <div className="form-person-box">
         <h1>PRIVATE PERSON: </h1>
         <Form.Group controlId="exampleForm.ControlInput1">

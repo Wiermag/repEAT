@@ -8,7 +8,6 @@ const  MapForm = ({ onDrag, id, icon }) => {
     },[])
 
     const initMap = () => {
-      console.log(document.getElementById(id));
       const map =  new window.google.maps.Map(document.getElementById(id), {
       center: {lat: 52.229675, lng: 21.012230}, 
       zoom : 12
